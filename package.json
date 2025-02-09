@@ -23,7 +23,7 @@
     "cloudinary": "^2.4.0",
     "clsx": "^2.1.1",
     "encoding": "^0.1.13",
-    "framer-motion": "^11.3.24",
+    "framer-motion": "^11.18.2",
     "gaxios": "^6.7.1",
     "googleapis": "^142.0.0",
     "imagemin": "^8.0.1",
@@ -39,6 +39,7 @@
     "react-confetti": "^6.1.0",
     "react-countdown": "^2.3.6",
     "react-dom": "^18",
+    "react-fast-marquee": "^1.6.5",
     "react-hooks-global-state": "^2.0.0",
     "react-paystack": "^6.0.0",
     "react-swipeable": "^7.0.0",
@@ -46,7 +47,8 @@
     "sass": "^1.77.8",
     "swiper": "^10.3.1",
     "tailwind-merge": "^2.4.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "yet-another-react-lightbox": "^3.21.7"
   },
   "devDependencies": {
     "@types/aos": "^3.0.7",
