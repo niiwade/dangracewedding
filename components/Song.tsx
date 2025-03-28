@@ -25,11 +25,11 @@ export default function Song(): JSX.Element {
     <section id="listen" className={`w-full mt-10 lg:mt-20`}>
       <Container customClasses="flex flex-col lg:flex-row">
         <div
-          className="flex flex-col justify-center basis-2/4 lg:max-w-lg xl:max-w-2xl 2xl:max-w-4xl"
+          className="flex flex-col justify-center basis-2/4 lg:max-w-lg xl:max-w-4xl 2xl:max-w-4xl"
           ref={textRef}
           style={animationStyles}
         >
-          <p className="font-bold text-2xl">Our Love Song</p>
+          <p className="font-bold text-4xl ml-5">Our Love Song</p>
           <div className="overflow-hidden">
             <h2
               className={`font-bold text-6xl pb-6 translate-y-36 md:translate-y-24 ${
