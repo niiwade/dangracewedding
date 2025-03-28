@@ -71,7 +71,7 @@ const Page = () => {
               </div>
               <div className="mt-4 flex items-start  justify-center">
                 <div className="">
-                  <h3 className="text-xs font-semibold sm:text-sm md:text-base">
+                  <h3 className="text-xs font-semibold sm:text-sm md:text-base text-center text-center">
                     <a href="#" title="" className="cursor-pointer">
                       Ben
                       <p className="text-center">Best Man</p>
@@ -94,7 +94,7 @@ const Page = () => {
               </div>
               <div className="mt-4 flex items-start  justify-center">
                 <div className="">
-                  <h3 className="text-xs font-semibold sm:text-sm md:text-base">
+                  <h3 className="text-xs font-semibold sm:text-sm md:text-base text-center">
                     <a href="#" title="" className="cursor-pointer">
                       Aba
                       <p className="text-center">Maid of Honour</p>
@@ -114,7 +114,7 @@ const Page = () => {
               </div>
               <div className="mt-4 flex items-start  justify-center">
                 <div className="">
-                  <h3 className="text-xs font-semibold sm:text-sm md:text-base">
+                  <h3 className="text-xs font-semibold sm:text-sm md:text-base text-center">
                     <a href="/" title="" className="cursor-pointer">
                       Brainer
                       <p className="text-center">Groomsman</p>
@@ -134,7 +134,7 @@ const Page = () => {
               </div>
               <div className="mt-4 flex items-start  justify-center">
                 <div className="">
-                  <h3 className="text-xs font-semibold sm:text-sm md:text-base">
+                  <h3 className="text-xs font-semibold sm:text-sm md:text-base text-center">
                     <a href="/" title="" className="cursor-pointer">
                       Damaris
                       <p className="text-center">Bridesmaid</p>
@@ -156,10 +156,33 @@ const Page = () => {
               </div>
               <div className="mt-4 flex items-start  justify-center ">
                 <div className="">
-                  <h3 className="text-xs font-semibold sm:text-sm md:text-base">
+                  <h3 className="text-xs font-semibold sm:text-sm md:text-base text-center">
                     <a href="/" title="" className="cursor-pointer">
                       Aladin
                       <p className="text-center">Groomsman</p>
+                    </a>
+                  </h3>
+                </div>
+              </div>
+            </article>
+
+            <article className="relative">
+              <div className="aspect-square overflow-hidden shadow-sm transition hover:shadow-lg">
+                <img
+                  className="group-hover:scale-125 h-full w-full object-cover transition-all duration-300"
+                  src="ewura.jpg"
+                  alt=""
+                />
+              </div>
+              <div className="absolute top-0 m-1 rounded-full bg-white">
+                {/* <p className="text-[10px] rounded-full bg-black p-1 font-bold uppercase tracking-wide text-white sm:px-3 sm:py-1">Sale</p> */}
+              </div>
+              <div className="mt-4 flex items-start  justify-center">
+                <div className="">
+                  <h3 className="text-xs font-semibold sm:text-sm md:text-base text-center">
+                    <a href="#" title="" className="cursor-pointer">
+                    Ewura
+                      <p className="text-center">Bridesmaid</p>
                     </a>
                   </h3>
                 </div>
@@ -179,7 +202,7 @@ const Page = () => {
               </div>
               <div className="mt-4 flex items-start  justify-center">
                 <div className="">
-                  <h3 className="text-xs font-semibold sm:text-sm md:text-base">
+                  <h3 className="text-xs font-semibold sm:text-sm md:text-base text-center">
                     <a href="#" title="" className="cursor-pointer">
                       Priscy
                       <p className="text-center">Bridesmaid</p>
@@ -192,16 +215,39 @@ const Page = () => {
             <article className="relative">
               <div className="aspect-square overflow-hidden shadow-sm transition hover:shadow-lg">
                 <img
+                  className="group-hover:scale-125 h-full w-full object-cover transition-all duration-300"
+                  src="hella.jpg"
+                  alt=""
+                />
+              </div>
+              <div className="absolute top-0 m-1 rounded-full bg-white">
+                {/* <p className="text-[10px] rounded-full bg-black p-1 font-bold uppercase tracking-wide text-white sm:px-3 sm:py-1">Sale</p> */}
+              </div>
+              <div className="mt-4 flex items-start  justify-center">
+                <div className="">
+                  <h3 className="text-xs font-semibold sm:text-sm md:text-base text-center">
+                    <a href="#" title="" className="cursor-pointer">
+                    Hella
+                      <p className="text-center">Bridesmaid</p>
+                    </a>
+                  </h3>
+                </div>
+              </div>
+            </article>
+
+            <article className="relative">
+              <div className="aspect-square overflow-hidden shadow-sm transition hover:shadow-lg">
+                <img
                   className="group-hover:scale-150 h-full w-full object-cover transition-all duration-300"
-                  src="/bright.jpg"
+                  src="/eugene.jpg"
                   alt=""
                 />
               </div>
               <div className="mt-4 flex items-start  justify-center">
                 <div className="">
-                  <h3 className="text-xs font-semibold sm:text-sm md:text-base">
+                  <h3 className="text-xs font-semibold sm:text-sm md:text-base text-center">
                     <a href="/" title="" className="cursor-pointer">
-                      Bright
+                      Eugene
                       <p className="text-center">Groomsman</p>
                     </a>
                   </h3>
@@ -213,21 +259,66 @@ const Page = () => {
               <div className="aspect-square overflow-hidden shadow-sm transition hover:shadow-lg">
                 <img
                   className="group-hover:scale-125 h-full w-full object-cover transition-all duration-300"
-                  src="/ewura.jpg"
+                  src="/portia.jpg"
                   alt=""
                 />
               </div>
               <div className="mt-4 flex items-start  justify-center">
                 <div className="">
-                  <h3 className="text-xs font-semibold sm:text-sm md:text-base">
+                  <h3 className="text-xs font-semibold sm:text-sm md:text-base text-center">
                     <a href="/" title="" className="cursor-pointer">
-                      Ewura
+                    Portia
                       <p className="text-center">Bridemaid</p>
                     </a>
                   </h3>
                 </div>
               </div>
             </article>
+
+            <article className="relative">
+              <div className="aspect-square overflow-hidden shadow-sm transition hover:shadow-lg">
+                <img
+                  className="group-hover:scale-125 h-full w-full object-cover transition-all duration-300"
+                  src="/Tjay.jpg"
+                  alt=""
+                />
+              </div>
+              <div className="mt-4 flex items-start  justify-center">
+                <div className="">
+                  <h3 className="text-xs font-semibold sm:text-sm md:text-base text-center">
+                    <a href="/" title="" className="cursor-pointer">
+                    Tjay
+                      <p className="text-center">Bridemaid</p>
+                    </a>
+                  </h3>
+                </div>
+              </div>
+            </article>
+
+
+            <article className="relative">
+              <div className="aspect-square overflow-hidden shadow-sm transition hover:shadow-lg">
+                <img
+                  className="group-hover:scale-125 h-full w-full object-cover transition-all duration-300"
+                  src="/Sperry.jpg"
+                  alt=""
+                />
+              </div>
+              <div className="mt-4 flex items-start  justify-center">
+                <div className="">
+                  <h3 className="text-xs font-semibold sm:text-sm md:text-base text-center">
+                    <a href="/" title="" className="cursor-pointer">
+                    Portia
+                      <p className="text-center">Bridemaid</p>
+                    </a>
+                  </h3>
+                </div>
+              </div>
+            </article>
+
+
+
+      
           </div>
         </div>
       </section>
