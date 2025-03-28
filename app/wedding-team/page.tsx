@@ -268,7 +268,7 @@ const Page = () => {
                   <h3 className="text-xs font-semibold sm:text-sm md:text-base text-center">
                     <a href="/" title="" className="cursor-pointer">
                     Portia
-                      <p className="text-center">Bridemaid</p>
+                      <p className="text-center">Bridesmaid</p>
                     </a>
                   </h3>
                 </div>
@@ -288,7 +288,7 @@ const Page = () => {
                   <h3 className="text-xs font-semibold sm:text-sm md:text-base text-center">
                     <a href="/" title="" className="cursor-pointer">
                     Tjay
-                      <p className="text-center">Bridemaid</p>
+                      <p className="text-center">Groomsman</p>
                     </a>
                   </h3>
                 </div>
@@ -309,7 +309,7 @@ const Page = () => {
                   <h3 className="text-xs font-semibold sm:text-sm md:text-base text-center">
                     <a href="/" title="" className="cursor-pointer">
                     Portia
-                      <p className="text-center">Bridemaid</p>
+                      <p className="text-center">Bridesmaid</p>
                     </a>
                   </h3>
                 </div>
