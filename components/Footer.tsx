@@ -95,7 +95,7 @@ const Footer = () => {
 					</a>
 				</nav>
 				<p className="py-10 text-center text-black">
-					2024 #ALamp4Trey | All rights reserved
+					2025 #Dannel2025 | All rights reserved
 				</p>
 			</footer>
 		</>
