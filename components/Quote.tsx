@@ -23,9 +23,6 @@ const Quote = () => {
             <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
               Our Journey to Forever
             </h2>
-            <p className="mt-4 text-base text-gray-200">
-              Grace is wonderful, beautiful and the love of my life.
-            </p>
           </div>
         </div>
       </section>
