@@ -8,8 +8,8 @@ const Quote = () => {
       >
         <div className="absolute inset-0">
           <img
-            className="object-cover w-full h-full md:object-left md:scale-100 md:origin-top-left"
-            src="/images/2.jpg"
+            className="object-cover w-full h-full md:object-left md:scale-400 md:origin-top-left"
+            src="/images/3.jpg"
             alt=""
           />
         </div>

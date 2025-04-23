@@ -69,7 +69,7 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Marquees />
+ 
       <Story />
       {/* <main className={styles.main}>
 				<div className={styles.spacer} />
@@ -81,6 +81,7 @@ export default function Home() {
 				</div>
 				<div className={styles.spacer} />
 			</main> */}
+          <Marquees />
       <Song />
       <Dates />
       {/* <Team /> */}

@@ -12,6 +12,11 @@ const config = {
 
   prefix: "",
   theme: {
+    fontFamily: {
+      cormorant: ['Cormorant', 'serif'],
+      sans: ['Cormorant', 'serif'],
+      serif: ['Cormorant', 'serif'],
+    },
     container: {
       center: true,
       padding: "2rem",

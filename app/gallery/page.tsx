@@ -21,58 +21,42 @@ interface GalleryThumbnail {
 const galleryThumbnails: GalleryThumbnail[] = [
   {
     id: 1,
-    src: "/gallery/thumbnails/thumbnail-1.jpg",
+    src: "/images/1.jpg",
     slides: [
-      { src: "/gallery/slider-images/slider-1.jpg" },
-      { src: "/gallery/slider-images/slider-2.jpg" },
-      { src: "/gallery/slider-images/slider-3.jpg" },
+      { src: "/images/1.jpg" },
     ],
   },
   {
     id: 2,
-    src: "/gallery/thumbnails/thumbnail-2.jpg",
+    src: "/images/5.jpg",
     slides: [
-      { src: "/gallery/slider-images/slider-4.jpg" },
-      { src: "/gallery/slider-images/slider-5.jpg" },
-      { src: "/gallery/slider-images/slider-6.jpg" },
+      { src: "/images/5.jpg" },
+
     ],
   },
   {
     id: 3,
-    src: "/gallery/thumbnails/thumbnail-3.jpg",
+    src: "/images/3.jpg",
     slides: [
-      { src: "/gallery/slider-images/slider-7.jpg" },
-      { src: "/gallery/slider-images/slider-8.jpg" },
-      { src: "/gallery/slider-images/slider-9.jpg" },
+      { src: "/images/3.jpg" },
     ],
   },
   {
     id: 4,
-    src: "/gallery/thumbnails/thumbnail-4.jpg",
+    src: "/images/4.jpg",
     slides: [
-      { src: "/gallery/slider-images/slider-10.jpg" },
-      { src: "/gallery/slider-images/slider-11.jpg" },
-      { src: "/gallery/slider-images/slider-12.jpg" },
+      { src: "/images/4.jpg" },
     ],
   },
   {
     id: 5,
-    src: "/gallery/thumbnails/thumbnail-5.jpg",
+    src: "/images/2.jpg",
     slides: [
-      { src: "/gallery/slider-images/slider-13.jpg" },
-      { src: "/gallery/slider-images/slider-14.jpg" },
-      { src: "/gallery/slider-images/slider-15.jpg" },
+      { src: "/images/2.jpg" },
+   
     ],
   },
-  {
-    id: 6,
-    src: "/gallery/thumbnails/thumbnail-6.jpg",
-    slides: [
-      { src: "/gallery/slider-images/slider-16.jpg" },
-      { src: "/gallery/slider-images/slider-17.jpg" },
-      { src: "/gallery/slider-images/slider-18.jpg" },
-    ],
-  },
+
 ];
 
 export default function PhotoGallery(): JSX.Element {
@@ -89,7 +73,7 @@ export default function PhotoGallery(): JSX.Element {
   return (
     <section
       id="photo-gallery"
-      className={`w-full mt-16 pb-14 lg:mt-56 lg:pb-56 lg:mb-[22.5rem]`}
+      className={`w-full mt-5 pb-10 lg:mt-5 lg:pb-5 lg:mb-[2.5rem]`}
       style={{
         transform: isInView ? "none" : "translateY(100px)",
         opacity: isInView ? 1 : 0,
@@ -98,28 +82,20 @@ export default function PhotoGallery(): JSX.Element {
       ref={sectionRef}
     >
       <Container>
-        <div className="overflow-hidden text-black">
-          <h2
-            className={`font-bold text-black text-6xl pb-6 translate-y-24 ${
-              isInView ? "animate-slideUp" : ""
-            }`}
-          >
-            Gallery
-          </h2>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-5">
+       
+    
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {galleryThumbnails.map((item, index) => (
-            <div className="flex flex-col mb-5 leading-none" key={item.id}>
-              <div className="w-full h-full rounded-lg bg-fluo-green transition-all">
-                <Image
-                  className="rounded-lg cursor-pointer hover:opacity-60 transition-all"
-                  src={item.src}
-                  width={400}
-                  height={400}
-                  alt="Gallery gig thumbnail"
-                  onClick={() => clickHandler(index)}
-                />
-              </div>
+            <div key={item.id} className="aspect-square w-full h-full">
+              <Image
+                className="w-full h-full object-cover rounded-lg cursor-pointer hover:opacity-60 transition-all"
+                src={item.src}
+                width={500}
+                height={500}
+                alt="Gallery image"
+                onClick={() => clickHandler(index)}
+                style={{ aspectRatio: "1/1" }}
+              />
             </div>
           ))}
           <Lightbox

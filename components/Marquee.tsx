@@ -5,64 +5,38 @@ export default function Marquees() {
   return (
     <>
       <Marquee speed={100} delay={0}>
-        <Image
-          src="/groom.jpg"
-          alt="Screenshot of the product"
-          className="w-full h-full object-cover mx-4"
-          width={500}
-          height={500}
-        />
 
         <Image
-          src="/bride.jpg"
+          src="/images/1.jpg"
           alt="Screenshot of the product"
           className="w-full h-full object-cover mx-4"
-          width={500}
-          height={500}
+          width={350}
+          height={350}
         />
-
         <Image
-          src="/groom.jpg"
+          src="/images/4.jpg"
           alt="Screenshot of the product"
           className="w-full h-full object-cover mx-4"
-          width={500}
-          height={500}
+          width={350}
+          height={350}
         />
-
         <Image
-          src="/bride.jpg"
+          src="/images/5.jpg"
           alt="Screenshot of the product"
           className="w-full h-full object-cover mx-4"
-          width={500}
-          height={500}
+          width={350}
+          height={350}
+        />
+            <Image
+          src="/images/5.jpg"
+          alt="Screenshot of the product"
+          className="w-full h-full object-cover mx-4"
+          width={350}
+          height={350}
         />
       </Marquee>
 
-      {/* <Marquee speed={100} delay={0}>
-        <Image
-          src="/static/images/backdrop-15.webp"
-          alt="Screenshot of the product"
-          className="w-full h-full object-cover mx-4"
-          width={500}
-          height={500}
-        />
-
-        <Image
-          src="/static/images/backdrop-12.webp"
-          alt="Screenshot of the product"
-          className="w-full h-full object-cover mx-4"
-          width={500}
-          height={500}
-        />
-
-        <Image
-          src="/static/images/backdrop-14.webp"
-          alt="Screenshot of the product"
-          className="w-full h-full object-cover mx-4"
-          width={500}
-          height={500}
-        />
-      </Marquee> */}
+  
     </>
   );
 }

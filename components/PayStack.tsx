@@ -60,7 +60,7 @@ const Paystack: React.FC = (): JSX.Element => {
 	}
 
 	return (
-		<div id="paymentForm" className="container mx-auto py-20 mt-20">
+		<div id="paymentForm" className="container mx-auto py-5 mt-5">
 			<div className="max-w-md mx-auto bg-white rounded-lg overflow-hidden md:max-w-xl">
 				<div className="md:flex">
 					<div className="w-full px-6 py-8 md:p-8">

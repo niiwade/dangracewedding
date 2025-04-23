@@ -68,7 +68,7 @@ const Footer = () => {
 			<footer className="relative   bg-[url('/images/8.jpg')] px-4 pt-20">
 				<div className="absolute -top-10 left-1/2 h-16 w-16 -translate-x-1/2 rounded-xl border-4 border-yellow-600 bg-white p-2">
 					<Image
-						src="/jtlogo.png"
+						src="/dglogo.png"
 						alt="logo"
 						className="h-full object-contain w-full"
 						width={100}

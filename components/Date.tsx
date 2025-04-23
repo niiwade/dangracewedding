@@ -68,7 +68,7 @@ const Dates = () => {
               <h3 className="mt-12 text-3xl font-bold text-gray-900 font-pj">
                 Dreamz & Memoriez Events Garden - Achimota, Accra
               </h3>
-              <p className="mt-5 text-base text-gray-600 font-bold">
+              <p className="mt-5 text-3xl text-gray-600 font-bold">
                 26th April 2025
               </p>
             </div>
