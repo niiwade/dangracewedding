@@ -136,7 +136,7 @@ const Page = () => {
                 <div className="">
                   <h3 className="text-xs font-semibold sm:text-sm md:text-base text-center">
                     <a href="/" title="" className="cursor-pointer">
-                      Damaris
+                      Tina
                       <p className="text-center">Bridesmaid</p>
                     </a>
                   </h3>
