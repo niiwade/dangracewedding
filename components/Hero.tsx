@@ -11,7 +11,7 @@ import { useInView } from "framer-motion";
 
 import Image from "next/image";
 
-const countdownDate = new Date("2024-09-28T23:18:07");
+const weddingDate = new Date("2025-04-26T00:00:00");
 
 interface ObserverOptions {
   rootMargin: string;
@@ -57,19 +57,21 @@ const Hero = () => {
                 </span>
               </p>
 
-              <p
-                data-aos="fade-left"
-                className="mt-8 text-3xl font-bold text-white font-serif italic"
-              >
-                26th April 2025
-              </p>
-
-              {!isDateInPast(countdownDate) && (
-                <CountdownTimer
-                  deadline={countdownDate}
-                  title={"Discount ends in"}
-                />
-              )}
+              <div data-aos="fade-left" className="mt-8">
+                {!isDateInPast(weddingDate) ? (
+                  <div className="space-y-2">
+                   
+                    <CountdownTimer
+                      deadline={weddingDate}
+                      title={"Countdown to our wedding"}
+                    />
+                  </div>
+                ) : (
+                  <p className="text-3xl font-bold text-white font-serif italic">
+                    26th April 2025
+                  </p>
+                )}
+              </div>
 
               <div className="flex items-center mt-10 space-x-3 sm:space-x-4">
                 {/* <a

@@ -18,9 +18,8 @@ interface CountdownTimerProps {
   const [completed, setCompleted] = useState<boolean>(false);
   const [confettiEndTime, setConfettiEndTime] = useState<number | null>(null);
 
-  const targetDate = new Date('2024-09-28T23:59:59').getTime();
-  const extraTime = 29 * 60 * 60 * 1000; // 29 hours in milliseconds
-  const endDate = targetDate + extraTime;
+  // Use the provided deadline prop instead of hardcoded date
+  const targetDate = deadline.getTime();
 
   useEffect(() => {
     const handleResize = () => {
@@ -32,12 +31,13 @@ interface CountdownTimerProps {
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
-      const distance = endDate - now;
+      const distance = targetDate - now;
 
       if (distance < 0 && !completed) {
         setCompleted(true);
         setShowConfetti(true);
-        const confettiEnd = now + 24 * 60 * 60 * 1000; // 24 hours from now
+        // Keep confetti running longer for the wedding celebration
+        const confettiEnd = now + 7 * 24 * 60 * 60 * 1000; // 7 days from now
         setConfettiEndTime(confettiEnd);
       } else if (distance >= 0) {
         setTimeLeft({
@@ -58,29 +58,31 @@ interface CountdownTimerProps {
       window.removeEventListener('resize', handleResize);
       clearInterval(interval);
     };
-  }, [endDate, completed, confettiEndTime]);
+  }, [targetDate, completed, confettiEndTime]);
 
   return (
-    <div className="text-center py-10">
+    <div className="text-center py-4">
       {completed ? (
-        <h2 className="text-white text-xl">Welcome to Our Big Day</h2>
+        <div className="space-y-4">
+          <h2 className="text-white text-3xl font-serif italic animate-pulse">We are happily married!</h2>
+          <p className="text-white text-lg">Thank you for celebrating with us</p>
+        </div>
       ) : (
-        <div className="flex items-start justify-center w-full gap-4 count-down-main">
+        <div className="flex items-center justify-center w-full gap-2 sm:gap-4 count-down-main">
           {Object.entries(timeLeft).map(([unit, value], index, array) => (
             <React.Fragment key={unit}>
-              <div className="timer w-16">
-                <div className=" py-4 px-2 rounded-full overflow-hidden">
-                  <h3 className="countdown-element font-Cormorant font-semibold text-2xl text-white text-center">
-                    {Math.floor(value / 10)}
-                    {Math.floor(value % 10)}
+              <div className="timer w-14 sm:w-20">
+                <div className="bg-white/20 backdrop-blur-sm py-3 px-1 rounded-lg overflow-hidden border border-white/30">
+                  <h3 className="countdown-element font-serif font-semibold text-xl sm:text-3xl text-white text-center">
+                    {String(value).padStart(2, '0')}
                   </h3>
                 </div>
-                <p className="text-lg font-Cormorant font-normal text-white mt-1 text-center w-full">
+                <p className="text-sm sm:text-lg font-serif font-normal text-white mt-1 text-center w-full capitalize">
                   {unit}
                 </p>
               </div>
               {index !== array.length - 1 && (
-                <h3 className="font-manrope font-semibold text-2xl text-gray-900">
+                <h3 className="font-serif font-semibold text-xl sm:text-3xl text-white">
                   :
                 </h3>
               )}
@@ -92,8 +94,10 @@ interface CountdownTimerProps {
         <Confetti
           width={windowSize.width}
           height={windowSize.height}
-          recycle={false}
-          numberOfPieces={500}
+          recycle={true}
+          numberOfPieces={800}
+          gravity={0.15}
+          colors={['#FFD700', '#FF4081', '#FF8A65', '#BA68C8', '#64B5F6', '#4CAF50']}
         />
       )}
     </div>
