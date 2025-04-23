@@ -55,13 +55,13 @@ const Navbar = () => {
                 >
                   FAQ
                 </Link>
-                <Link
+                {/* <Link
                   href="/rsvp"
                   className="flex w-full items-center py-2 text-lg font-semibold"
                   prefetch={false}
                 >
                   RSVP
-                </Link>
+                </Link> */}
                 <Link
                   href="/order-of-event"
                   className="flex w-full items-center py-2 text-lg font-semibold"
