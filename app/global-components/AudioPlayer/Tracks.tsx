@@ -1,7 +1,7 @@
 export const tracks = [
   {
     title: "Now and Always",
-    src: "/mp3-songs/kotrell.mp3",
+    src: "/mp3-songs/Kotrell.mp3",
     author: "Kotrell",
   },
   {

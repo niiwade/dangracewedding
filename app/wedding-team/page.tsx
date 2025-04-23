@@ -128,7 +128,7 @@ const Page = () => {
               <div className="aspect-square overflow-hidden shadow-sm transition hover:shadow-lg">
                 <img
                   className="group-hover:scale-125 h-full w-full object-cover transition-all duration-300"
-                  src="damaris.jpg"
+                  src="tina.jpg"
                   alt=""
                 />
               </div>
