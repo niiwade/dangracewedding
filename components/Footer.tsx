@@ -97,6 +97,11 @@ const Footer = () => {
 				<p className="py-10 text-center text-black">
 					2025 #Dannel2025 | All rights reserved
 				</p>
+				<p className="py-10 text-center text-black">
+					Powered by <span> <a href="https://www.revasint.com/" className="font-medium text-black">
+						Revas Int
+					</a> </span>
+				</p> 
 			</footer>
 		</>
 	);
