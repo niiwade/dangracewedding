@@ -1,3 +1,4 @@
+'use client'
 import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -7,13 +8,17 @@ import {
   NavigationMenuLink,
 } from "@/components/ui/navigation-menu";
 import Image from "next/image";
+import { useState } from "react";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  
+  const closeSheet = () => setIsOpen(false);
   return (
     <>
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <header className="flex h-20 w-full shrink-0 items-center px-4 md:px-6">
-          <Sheet>
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
               <Button variant="outline" size="icon" className="lg:hidden">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-menu">
@@ -24,7 +29,7 @@ const Navbar = () => {
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="bg-white dark:bg-gray-900">
-              <Link href="/" prefetch={false} className="block mb-6">
+              <Link href="/" prefetch={false} className="block mb-6" onClick={closeSheet}>
                 <Image
                   className="h-20 w-20"
                   src="/dglogo.png"
@@ -38,6 +43,7 @@ const Navbar = () => {
                   href="/wedding-team"
                   className="flex w-full items-center py-2 text-lg font-semibold"
                   prefetch={false}
+                  onClick={closeSheet}
                 >
                   Wedding Team
                 </Link>
@@ -45,6 +51,7 @@ const Navbar = () => {
                   href="/gallery"
                   className="flex w-full items-center py-2 text-lg font-semibold"
                   prefetch={false}
+                  onClick={closeSheet}
                 >
                   Gallery
                 </Link>
@@ -52,6 +59,7 @@ const Navbar = () => {
                   href="/faq"
                   className="flex w-full items-center py-2 text-lg font-semibold"
                   prefetch={false}
+                  onClick={closeSheet}
                 >
                   FAQ
                 </Link>
@@ -66,6 +74,7 @@ const Navbar = () => {
                   href="/order-of-event"
                   className="flex w-full items-center py-2 text-lg font-semibold"
                   prefetch={false}
+                  onClick={closeSheet}
                 >
                   Order of Event
                 </Link>

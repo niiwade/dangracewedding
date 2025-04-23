@@ -4,6 +4,9 @@ import { useState, useRef } from "react";
 import { useInView } from "framer-motion";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
+import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
+import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
 import Image from "next/image";
 
 import Container from "../global-components/Container/Container";
@@ -18,52 +21,32 @@ interface GalleryThumbnail {
   slides: GallerySlide[];
 }
 
-const galleryThumbnails: GalleryThumbnail[] = [
-  {
-    id: 1,
-    src: "/images/1.jpg",
-    slides: [
-      { src: "/images/1.jpg" },
-    ],
-  },
-  {
-    id: 2,
-    src: "/images/5.jpg",
-    slides: [
-      { src: "/images/5.jpg" },
-
-    ],
-  },
-  {
-    id: 3,
-    src: "/images/3.jpg",
-    slides: [
-      { src: "/images/3.jpg" },
-    ],
-  },
-  {
-    id: 4,
-    src: "/images/4.jpg",
-    slides: [
-      { src: "/images/4.jpg" },
-    ],
-  },
-  {
-    id: 5,
-    src: "/images/2.jpg",
-    slides: [
-      { src: "/images/2.jpg" },
-   
-    ],
-  },
-
+// Define all images in a single array for easier management
+const galleryImages = [
+  { id: 1, src: "/images/1.jpg" },
+  { id: 2, src: "/images/5.jpg" },
+  { id: 3, src: "/images/3.jpg" },
+  { id: 4, src: "/images/4.jpg" },
+  { id: 5, src: "/images/2.jpg" },
 ];
+
+// Create slides for lightbox
+const slides = galleryImages.map(image => ({ src: image.src }));
+
+// Create thumbnails with references to the slides
+const galleryThumbnails = galleryImages.map(image => ({
+  id: image.id,
+  src: image.src,
+  slides: [{ src: image.src }]
+}));
 
 export default function PhotoGallery(): JSX.Element {
   const [openGallery, setOpenGallery] = useState<boolean>(false);
   const [galleryIndex, setGalleryIndex] = useState<number>(0);
   const sectionRef = useRef<HTMLElement | null>(null);
   const isInView = useInView(sectionRef, { once: true });
+
+  // We'll use the slides array directly
 
   const clickHandler = (index: number): void => {
     setOpenGallery(true);
@@ -101,7 +84,20 @@ export default function PhotoGallery(): JSX.Element {
           <Lightbox
             open={openGallery}
             close={() => setOpenGallery(false)}
-            slides={galleryThumbnails[galleryIndex].slides}
+            index={galleryIndex}
+            slides={slides}
+            plugins={[Thumbnails, Zoom, Fullscreen]}
+            thumbnails={{
+              position: "bottom",
+              width: 120,
+              height: 80,
+              gap: 12,
+              padding: 4
+            }}
+            zoom={{
+              maxZoomPixelRatio: 3,
+              zoomInMultiplier: 2
+            }}
           />
         </div>
       </Container>
