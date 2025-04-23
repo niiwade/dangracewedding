@@ -30,23 +30,7 @@ const Hero = () => {
   return (
     <>
       <div className="relative pt-48 pb-12 bg-black xl:pt-60 sm:pb-16 lg:pb-32 xl:pb-48 2xl:pb-56">
-        <header className="absolute inset-x-0 top-0 z-10 py-8 xl:py-12">
-          <div className="px-6 mx-auto sm:px-8 lg:px-12 max-w-7xl">
-            <div className="flex items-center justify-between">
-           
-
-              <div className="md:hidden">
-                <button type="button" className="p-2 -m-2 transition-all duration-200 rounded-full text-white focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-primary focus:ring-offset-secondary">
-                  <svg className="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-                  </svg>
-                </button>
-              </div>
-
-           
-            </div>
-          </div>
-        </header>
+   
 
         <div className="absolute inset-0">
           <Image
